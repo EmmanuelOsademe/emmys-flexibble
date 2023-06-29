@@ -30,9 +30,9 @@ const RelatedProjects: React.FC<Props> = async ({userId, projectId}) => {
             </div>
             <div className="related_projects-grid">
                  {filteredProjects?.map(({node}: {node: ProjectInterface}) => (
-                    <div className="flexCenter related_project-card drop-shadow-2xl">
+                    <div className="flexCenter related_project-card drop-shadow-2xl" key={node.id}>
                         <Link 
-                            href={`project/${node?.id}`}
+                            href={`/project/${node?.id}`}
                             className="flexCenter group relative w-full h-full"
                         >
                             <Image 
